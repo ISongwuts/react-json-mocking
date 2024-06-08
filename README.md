@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+# Mocking JSON Website with React, TypeScript, and Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="./public/images/preview.png">
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I created this project to demonstrate how to set up a modern web development environment using React, TypeScript, and Vite. The goal is to provide a hands-on example of how to create a mock JSON website, which can be particularly useful for front-end developers who need to simulate data fetching and handling in their applications.
 
-## Expanding the ESLint configuration
+By following this guide, developers can learn how to:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Quickly scaffold a new React project using Vite
+- Configure TypeScript for type-safe development
+- Create and use mock JSON data
+- Fetch and display data in a React component
 
-- Configure the top-level `parserOptions` property like this:
+This project serves as a starting point for anyone looking to learn or improve their skills in modern web development with these technologies. It can also be extended to handle more complex scenarios and data structures, making it a versatile foundation for building more sophisticated applications.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Prerequisites
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Before you begin, make sure you have the following installed on your system:
+
+- [Node.js](https://nodejs.org/) (version 14 or later)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
