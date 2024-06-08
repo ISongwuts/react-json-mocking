@@ -1,6 +1,6 @@
 # Mocking JSON Website with React, TypeScript, and Vite
 
-![Alt text](./public/images/preview.png)
+<img src="https://i.imgur.com/yIObLUU.png">
 
 ## Description
 
