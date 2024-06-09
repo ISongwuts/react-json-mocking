@@ -1,13 +1,30 @@
+import { useState } from "react";
+import usePatternStore from "../../store/store";
+import selectFakerFunction from "../../util/select-faker-func";
 import ActionButton from "../action-button"
 import SpaceCard from "./space-card"
 
-type Props = {}
+const Workspace = () => {
+  const [output, setOutput] = useState<OutputType | null>(null)
+  const { inputValues, selectValues } = usePatternStore((state) => ({
+    inputValues: state.inputValues,
+    selectValues: state.selectValues,
+  }));
 
-const Workspace = (props: Props) => {
+  const generatePatternJson = () => {
+    const patternJsonArray = inputValues.map((input, index) => ({
+      [input]: selectFakerFunction(selectValues[index])
+    }));
+
+    const data = { data: patternJsonArray };
+    setOutput(data)
+    console.log(data);
+  };
+
   return (
     <div className="flex flex-col w-[75%] gap-5">
       <h2 className="text-2xl text-white font-bold"><span className=" text-green-400">Work</span>space</h2>
-      <SpaceCard />
+      <SpaceCard output={output}/>
       <div className="flex justify-end gap-4 w-full text-white">
         <div className="flex  items-center gap-2">
           <label htmlFor="">Rows</label>
@@ -24,6 +41,7 @@ const Workspace = (props: Props) => {
           borderColor="border-green-400"
           bgColor="hover:bg-green-400"
           text="Generate"
+          do={generatePatternJson}
         />
         <ActionButton
           textColor="text-yellow-400"
